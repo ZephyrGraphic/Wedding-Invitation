@@ -249,8 +249,8 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault(); // Mencegah pengiriman formulir default
 
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData.entries());
+    const formData = new FormData(this); // Mengambil data dari formulir
+    const data = Object.fromEntries(formData.entries()); // Mengonversi FormData menjadi objek
 
     fetch(
       "https://script.google.com/macros/s/AKfycbxcNlDvrisCpSI8URP6dwaj2ALTGyFfUoCLb1Av0DLkOuvhSs8tTaE0X_bsrPimN9oE/exec",
@@ -260,7 +260,7 @@ document
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(data), // Mengirim data sebagai JSON
       }
     )
       .then((response) => {
