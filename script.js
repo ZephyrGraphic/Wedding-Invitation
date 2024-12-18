@@ -349,3 +349,28 @@ function updateActiveNavLink() {
 }
 
 window.addEventListener('scroll', updateActiveNavLink);
+
+// Script untuk menampilkan widget cuaca
+window.myWidgetParam = {
+  id: 1,
+  cityid: '1645528', // ID kota untuk Sukabumi
+  appid: '', // Kosongkan jika tidak diperlukan
+  units: 'metric',
+  containerid: 'weather-widget',
+  background: 'transparent',
+  color: '#000',
+  font: 'Arial',
+  fontsize: '16',
+  lang: 'id',
+};
+
+// Script untuk memuat widget cuaca
+!function(d,s,id){
+  var js,fjs=d.getElementsByTagName(s)[0];
+  if(!d.getElementById(id)){
+    js=d.createElement(s);
+    js.id=id;
+    js.src='https://weatherwidget.io/js/widget.min.js';
+    fjs.parentNode.insertBefore(js,fjs);
+  }
+}(document,'script','weatherwidget-io-js');
