@@ -253,8 +253,9 @@ document
     const data = Object.fromEntries(formData.entries());
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbxcNlDvrisCpSI8URP6dwaj2ALTGyFfUoCLb1Av0DLkOuvhSs8tTaE0X_bsrPimN9oE/exec", // Ganti dengan URL Google Apps Script Anda
+      "https://script.google.com/macros/s/AKfycbxcNlDvrisCpSI8URP6dwaj2ALTGyFfUoCLb1Av0DLkOuvhSs8tTaE0X_bsrPimN9oE/exec",
       {
+        // Ganti dengan URL Google Apps Script Anda
         method: "POST",
         headers: {
           "Content-Type": "application/json",
