@@ -253,9 +253,8 @@ document
     const data = Object.fromEntries(formData.entries());
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbxcNlDvrisCpSI8URP6dwaj2ALTGyFfUoCLb1Av0DLkOuvhSs8tTaE0X_bsrPimN9oE/exec",
+      "https://script.google.com/macros/s/AKfycbxcNlDvrisCpSI8URP6dwaj2ALTGyFfUoCLb1Av0DLkOuvhSs8tTaE0X_bsrPimN9oE/exec", // Ganti dengan URL Google Apps Script Anda
       {
-        // Ganti dengan URL Google Apps Script Anda
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -263,7 +262,12 @@ document
         body: JSON.stringify(data),
       }
     )
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
       .then((data) => {
         alert("Konfirmasi berhasil dikirim!");
       })
