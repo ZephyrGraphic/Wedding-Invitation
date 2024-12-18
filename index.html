@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Pernikahan Haikal & Rofiah</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Lightbox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-rose-50">
+    <!-- Navbar -->
+    <nav
+      id="mainNav"
+      class="fixed top-0 left-0 right-0 z-50 transform -translate-y-full transition-transform duration-500"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <!-- Logo/Brand -->
+          <div class="flex-shrink-0 flex items-center">
+            <h1 class="text-2xl font-bold text-rose-800">H & R</h1>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex md:items-center space-x-1">
+            <a
+              href="#home"
+              class="nav-link text-rose-700 hover:text-rose-900 px-2 py-1 text-sm font-medium rounded-md hover:bg-rose-50 transition-colors duration-200"
+              >Beranda</a
+            >
+            <a
+              href="#couple"
+              class="nav-link text-rose-700 hover:text-rose-900 px-2 py-1 text-sm font-medium rounded-md hover:bg-rose-50 transition-colors duration-200"
+              >Mempelai</a
+            >
+            <a
+              href="#event"
+              class="nav-link text-rose-700 hover:text-rose-900 px-2 py-1 text-sm font-medium rounded-md hover:bg-rose-50 transition-colors duration-200"
+              >Waktu dan Tempat</a
+            >
+            <a
+              href="#story"
+              class="nav-link text-rose-700 hover:text-rose-900 px-2 py-1 text-sm font-medium rounded-md hover:bg-rose-50 transition-colors duration-200"
+              >Cerita</a
+            >
+            <a
+              href="#gallery"
+              class="nav-link text-rose-700 hover:text-rose-900 px-2 py-1 text-sm font-medium rounded-md hover:bg-rose-50 transition-colors duration-200"
+              >Galeri</a
+            >
+            <a
+              href="#maps"
+              class="nav-link text-rose-700 hover:text-rose-900 px-2 py-1 text-sm font-medium rounded-md hover:bg-rose-50 transition-colors duration-200"
+              >Lokasi</a
+            >
+            <a
+              href="#rsvp"
+              class="nav-link text-rose-700 hover:text-rose-900 px-2 py-1 text-sm font-medium rounded-md hover:bg-rose-50 transition-colors duration-200"
+              >RSVP</a
+            >
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="flex items-center md:hidden">
+            <button
+              id="menuBtn"
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-rose-700 hover:text-rose-900 hover:bg-rose-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-rose-500"
+            >
+              <span class="sr-only">Buka menu utama</span>
+              <i class="fas fa-bars block h-6 w-6"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-white/95 backdrop-blur-sm"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="#home"
+            class="nav-link block px-3 py-2 rounded-md text-base font-medium text-rose-700 hover:text-rose-900 hover:bg-rose-50"
+            >Beranda</a
+          >
+          <a
+            href="#couple"
+            class="nav-link block px-3 py-2 rounded-md text-base font-medium text-rose-700 hover:text-rose-900 hover:bg-rose-50"
+            >Mempelai</a
+          >
+          <a
+            href="#event"
+            class="nav-link text-rose-700 hover:text-rose-900 px-2 py-1 text-sm font-medium rounded-md hover:bg-rose-50 transition-colors duration-200"
+            >Waktu dan Tempat</a
+          >
+          <a
+            href="#story"
+            class="nav-link block px-3 py-2 rounded-md text-base font-medium text-rose-700 hover:text-rose-900 hover:bg-rose-50"
+            >Cerita</a
+          >
+          <a
+            href="#gallery"
+            class="nav-link block px-3 py-2 rounded-md text-base font-medium text-rose-700 hover:text-rose-900 hover:bg-rose-50"
+            >Galeri</a
+          >
+          <a
+            href="#maps"
+            class="nav-link block px-3 py-2 rounded-md text-base font-medium text-rose-700 hover:text-rose-900 hover:bg-rose-50"
+            >Lokasi</a
+          >
+          <a
+            href="#rsvp"
+            class="nav-link block px-3 py-2 rounded-md text-base font-medium text-rose-700 hover:text-rose-900 hover:bg-rose-50"
+            >RSVP</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Lock Overlay -->
+    <div
+      id="lockOverlay"
+      class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-500 opacity-100"
+    ></div>
+
+    <!-- Hero Section -->
+    <div
+      id="home"
+      class="min-h-screen flex flex-col items-center justify-center p-4 relative"
+    >
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="img/hero-background.jpg"
+          alt="Background"
+          class="w-full h-full object-cover"
+        />
+        <!-- Overlay untuk memastikan teks tetap terbaca -->
+        <div class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+      </div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 bg-white/70 backdrop-blur-md shadow-lg rounded-lg p-4 md:p-8 w-full max-w-4xl mx-auto text-center border border-rose-100"
+        data-aos="fade-up"
+      >
+        <!-- Kata-kata Pembuka -->
+        <div class="mb-8">
+          <h2 class="text-2xl md:text-3xl text-rose-700 mb-4">
+            Kepada Bapak/Ibu/Saudara/i
+          </h2>
+          <h1 class="text-4xl md:text-6xl text-rose-800 font-heading mb-4">
+            Haikal & Rofiah
+          </h1>
+          <p class="text-xl md:text-2xl text-rose-700">
+            Akan Melangsungkan Resepsi Pernikahan Dalam:
+          </p>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="mb-8">
+          <div class="grid grid-cols-4 gap-4 max-w-2xl mx-auto">
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-lg p-4 text-center"
+            >
+              <div
+                id="days"
+                class="text-3xl md:text-4xl font-bold text-rose-800"
+              >
+                0
+              </div>
+              <div class="text-rose-600 text-sm md:text-base">Hari</div>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-lg p-4 text-center"
+            >
+              <div
+                id="hours"
+                class="text-3xl md:text-4xl font-bold text-rose-800"
+              >
+                00
+              </div>
+              <div class="text-rose-600 text-sm md:text-base">Jam</div>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-lg p-4 text-center"
+            >
+              <div
+                id="minutes"
+                class="text-3xl md:text-4xl font-bold text-rose-800"
+              >
+                00
+              </div>
+              <div class="text-rose-600 text-sm md:text-base">Menit</div>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-lg p-4 text-center"
+            >
+              <div
+                id="seconds"
+                class="text-3xl md:text-4xl font-bold text-rose-800"
+              >
+                00
+              </div>
+              <div class="text-rose-600 text-sm md:text-base">Detik</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tombol Lihat Undangan -->
+        <div class="mt-8">
+          <button
+            id="showInvitation"
+            onclick="showFullInvitation()"
+            class="px-8 py-3 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            <i class="fas fa-envelope-open-text mr-2"></i>
+            Lihat Undangan
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Music Control -->
+    <div
+      id="musicControl"
+      class="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-4 opacity-0"
+    >
+      <div class="relative group">
+        <button
+          onclick="toggleMusic()"
+          class="bg-rose-600 hover:bg-rose-700 text-white rounded-full p-4 shadow-lg transition-all duration-300 flex items-center space-x-2 group-hover:w-auto"
+        >
+          <i id="musicIcon" class="fas fa-music"></i>
+          <span class="hidden group-hover:inline whitespace-nowrap text-sm ml-2"
+            >Play Music</span
+          >
+        </button>
+      </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="bgMusic" loop>
+      <source src="audio/bgmusic.mp3" type="audio/mp3" />
+    </audio>
+
+    <!-- Konten Utama (awalnya hidden) -->
+    <div
+      id="mainContent"
+      class="opacity-0 invisible transition-all duration-500"
+    >
+      <!-- Mempelai Section -->
+      <section id="couple" class="min-h-screen py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+          <h2 class="text-4xl md:text-5xl text-rose-800 font-heading mb-8">
+            Bismillahirrahmanirrahim
+          </h2>
+          <p class="text-xl text-rose-700 mb-12">
+            Dengan memohon rahmat dan ridho Allah SWT,<br />
+            kami bermaksud menyelenggarakan pernikahan putra-putri kami:
+          </p>
+
+          <!-- Container untuk Foto Mempelai -->
+          <div
+            class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-12"
+          >
+            <!-- Mempelai Pria -->
+            <div class="text-center" data-aos="fade-right">
+              <div
+                class="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden border-4 border-rose-200 transform md:scale-x-[-1]"
+              >
+                <img
+                  src="img/Haikal.jpg"
+                  alt="Mempelai Pria"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-3xl text-rose-800 font-heading mb-2">Haikal</h3>
+              <p class="text-xl text-rose-700 mb-4">
+                Putra dari<br />Bpk. Lorem & Ibu Ipsum
+              </p>
+              <!-- Biodata Mempelai Pria -->
+              <div
+                class="bg-white/70 backdrop-blur-sm p-4 rounded-lg text-left"
+              >
+                <p class="text-rose-700 mb-2">
+                  <i class="fas fa-graduation-cap mr-2"></i>S1 Teknik
+                  Informatika
+                </p>
+                <p class="text-rose-700 mb-2">
+                  <i class="fas fa-building mr-2"></i>Software Engineer at Tech
+                  Corp
+                </p>
+                <p class="text-rose-700">
+                  <i class="fas fa-map-marker-alt mr-2"></i>Jakarta
+                </p>
+              </div>
+            </div>
+
+            <!-- Symbol Love -->
+            <div class="text-5xl text-rose-600 font-heading animate-pulse">
+              ❤️
+            </div>
+
+            <!-- Mempelai Wanita -->
+            <div class="text-center" data-aos="fade-left">
+              <div
+                class="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden border-4 border-rose-200"
+              >
+                <img
+                  src="img/Rofiah.jpg"
+                  alt="Mempelai Wanita"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-3xl text-rose-800 font-heading mb-2">Rofiah</h3>
+              <p class="text-xl text-rose-700 mb-4">
+                Putri dari<br />Bpk. Lorem & Ibu Ipsum
+              </p>
+              <!-- Biodata Mempelai Wanita -->
+              <div
+                class="bg-white/70 backdrop-blur-sm p-4 rounded-lg text-left"
+              >
+                <p class="text-rose-700 mb-2">
+                  <i class="fas fa-graduation-cap mr-2"></i>S1 Ekonomi
+                </p>
+                <p class="text-rose-700 mb-2">
+                  <i class="fas fa-building mr-2"></i>Financial Analyst at
+                  Finance Corp
+                </p>
+                <p class="text-rose-700">
+                  <i class="fas fa-map-marker-alt mr-2"></i>Bandung
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Waktu & Lokasi Section -->
+      <section id="event" class="min-h-screen py-20 px-4 bg-rose-50">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+          <h2 class="text-4xl text-rose-800 font-heading mb-12">
+            Waktu & Tempat
+          </h2>
+
+          <!-- Akad Nikah -->
+          <div
+            class="bg-white/70 backdrop-blur-sm p-8 rounded-lg shadow-md mb-8"
+            data-aos="fade-up"
+          >
+            <h3 class="text-2xl text-rose-800 font-heading mb-4">Akad Nikah</h3>
+            <p class="text-xl text-rose-700">Sabtu, 15 Januari 2028</p>
+            <p class="text-xl text-rose-700">Pukul 09:00 WIB</p>
+          </div>
+
+          <!-- Resepsi -->
+          <div
+            class="bg-white/70 backdrop-blur-sm p-8 rounded-lg shadow-md mb-8"
+            data-aos="fade-up"
+          >
+            <h3 class="text-2xl text-rose-800 font-heading mb-4">Resepsi</h3>
+            <p class="text-xl text-rose-700">Sabtu, 15 Januari 2028</p>
+            <p class="text-xl text-rose-700">Pukul 11:00 - 16:00 WIB</p>
+          </div>
+
+          <!-- Lokasi -->
+          <div
+            class="bg-white/70 backdrop-blur-sm p-8 rounded-lg shadow-md"
+            data-aos="fade-up"
+          >
+            <h3 class="text-2xl text-rose-800 font-heading mb-4">Lokasi</h3>
+            <p class="text-xl text-rose-700 mb-4">
+              Situ Gunung Suspension Bridge
+            </p>
+            <p class="text-rose-700 mb-6">Sukabumi, Jawa Barat</p>
+            <div class="flex justify-center space-x-4">
+              <a
+                href="#maps"
+                class="px-6 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors duration-300"
+              >
+                <i class="fas fa-map-marker-alt mr-2"></i>Lihat Peta
+              </a>
+              <a
+                href="https://maps.app.goo.gl/y7vSXMSikKNiNAfS9"
+                target="_blank"
+                class="px-6 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors duration-300"
+              >
+                <i class="fas fa-directions mr-2"></i>Petunjuk Arah
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline Section -->
+      <section id="story" class="min-h-screen py-20 px-4">
+        <div class="max-w-4xl mx-auto" data-aos="fade-up">
+          <h2 class="text-4xl text-rose-800 font-heading text-center mb-12">
+            Cerita Kami
+          </h2>
+
+          <!-- Timeline -->
+          <div class="relative">
+            <!-- Garis Timeline -->
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-rose-200"
+            ></div>
+
+            <!-- Timeline Item 1 -->
+            <div class="mb-12 relative" data-aos="fade-right">
+              <div class="flex items-center">
+                <div class="w-1/2 pr-8 text-right">
+                  <h3 class="text-2xl text-rose-800 font-heading mb-2">
+                    Pertama Bertemu
+                  </h3>
+                  <p class="text-rose-700">
+                    Di sebuah acara kampus, kami dipertemukan dalam sebuah
+                    organisasi yang sama.
+                  </p>
+                  <p class="text-rose-600 mt-2">Januari 2022</p>
+                </div>
+                <div
+                  class="w-4 h-4 bg-rose-500 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10"
+                ></div>
+                <div class="w-1/2 pl-8"></div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="mb-12 relative" data-aos="fade-left">
+              <div class="flex items-center">
+                <div class="w-1/2 pr-8"></div>
+                <div
+                  class="w-4 h-4 bg-rose-500 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10"
+                ></div>
+                <div class="w-1/2 pl-8">
+                  <h3 class="text-2xl text-rose-800 font-heading mb-2">
+                    Mulai Dekat
+                  </h3>
+                  <p class="text-rose-700">
+                    Intensitas pertemuan yang sering membuat kami semakin dekat.
+                  </p>
+                  <p class="text-rose-600 mt-2">Maret 2022</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="mb-12 relative" data-aos="fade-right">
+              <div class="flex items-center">
+                <div class="w-1/2 pr-8 text-right">
+                  <h3 class="text-2xl text-rose-800 font-heading mb-2">
+                    Ta'aruf
+                  </h3>
+                  <p class="text-rose-700">
+                    Memantapkan hati untuk mengenal lebih dekat dengan restu
+                    orang tua.
+                  </p>
+                  <p class="text-rose-600 mt-2">Januari 2023</p>
+                </div>
+                <div
+                  class="w-4 h-4 bg-rose-500 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10"
+                ></div>
+                <div class="w-1/2 pl-8"></div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="mb-12 relative" data-aos="fade-left">
+              <div class="flex items-center">
+                <div class="w-1/2 pr-8"></div>
+                <div
+                  class="w-4 h-4 bg-rose-500 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10"
+                ></div>
+                <div class="w-1/2 pl-8">
+                  <h3 class="text-2xl text-rose-800 font-heading mb-2">
+                    Lamaran
+                  </h3>
+                  <p class="text-rose-700">
+                    Mengikrarkan janji untuk melangkah ke jenjang yang lebih
+                    serius.
+                  </p>
+                  <p class="text-rose-600 mt-2">Juni 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galeri Section -->
+      <section id="gallery" class="min-h-screen py-20 px-4 bg-rose-50">
+        <div class="max-w-6xl mx-auto" data-aos="fade-up">
+          <h2 class="text-4xl text-rose-800 font-heading text-center mb-12">
+            Galeri Foto
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Gallery Item 1 -->
+            <a
+              href="img/large-Haikal.jpg"
+              data-lightbox="wedding-gallery"
+              data-title="Momen Bahagia Kami"
+              class="block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              data-aos="zoom-in"
+            >
+              <img
+                src="img/Haikal.jpg"
+                alt="Gallery 1"
+                class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </a>
+
+            <!-- Gallery Item 2 -->
+            <a
+              href="img/large-hero-background.jpg"
+              data-lightbox="wedding-gallery"
+              data-title="Momen Spesial"
+              class="block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              data-aos="zoom-in"
+            >
+              <img
+                src="img/hero-background.jpg"
+                alt="Gallery 2"
+                class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </a>
+
+            <!-- Gallery Item 3 -->
+            <a
+              href="img/large-Rofiah.jpg"
+              data-lightbox="wedding-gallery"
+              data-title="Momen Indah"
+              class="block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              data-aos="zoom-in"
+            >
+              <img
+                src="img/Rofiah.jpg"
+                alt="Gallery 3"
+                class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Maps Section -->
+      <section id="maps" class="min-h-screen py-20 px-4">
+        <div class="max-w-4xl mx-auto" data-aos="fade-up">
+          <h2 class="text-4xl text-rose-800 font-heading text-center mb-12">
+            Lokasi Acara
+          </h2>
+
+          <!-- Info Cuaca -->
+          <div
+            class="bg-white/70 backdrop-blur-sm p-6 rounded-lg shadow-md mb-8"
+          >
+            <h3 class="text-2xl text-rose-800 font-heading mb-4">
+              Prakiraan Cuaca
+            </h3>
+            <div
+              id="id5bf36b6b00c"
+              a='{"t":"r","v":"1.2","lang":"id","locs":[],"ssot":"c","sics":"ds","cbkg":"rgb(69,90,100)","cfnt":"#FFFFFF","codd":"rgb(84,110,122)","cont":"#E0E0E0"}'
+            >
+              <a href="https://cuacalab.id/widget/"
+                >Weather widget html for website by cuacalab.id</a
+              >
+            </div>
+            <script
+              async
+              src="https://static1.cuacalab.id/widgetjs/?id=id5bf36b6b00c"
+            ></script>
+
+            <!-- Informasi Jarak -->
+            <div
+              id="distance-info"
+              class="mt-4 text-center text-rose-700"
+            ></div>
+          </div>
+
+          <!-- Embedded Map -->
+          <div
+            class="bg-white/70 backdrop-blur-sm p-6 rounded-lg shadow-md mb-8"
+          >
+            <div
+              class="relative w-full h-96 rounded-lg overflow-hidden"
+              data-aos="zoom-in"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11204.863160422332!2d106.92212896845774!3d-6.828395924069004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e684b37768ad51d%3A0x6f1b26ff0724e777!2sSitu%20Gunung%20Suspension%20Bridge!5e0!3m2!1sen!2sid!4v1734510010675!5m2!1sen!2sid"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="absolute inset-0"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Tombol Navigasi -->
+          <div class="flex justify-center space-x-4">
+            <a
+              href="https://maps.app.goo.gl/y7vSXMSikKNiNAfS9"
+              target="_blank"
+              class="px-6 py-3 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors duration-300 flex items-center"
+            >
+              <i class="fas fa-directions mr-2"></i>
+              Petunjuk Arah
+            </a>
+            <button
+              onclick="shareLocation()"
+              class="px-6 py-3 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors duration-300 flex items-center"
+            >
+              <i class="fas fa-share-alt mr-2"></i>
+              Bagikan Lokasi
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- RSVP Section -->
+      <section id="rsvp" class="min-h-screen py-20 px-4 bg-rose-50">
+        <div class="max-w-2xl mx-auto" data-aos="fade-up">
+          <h2 class="text-4xl text-rose-800 font-heading text-center mb-12">
+            Konfirmasi Kehadiran
+          </h2>
+
+          <form
+            id="rsvpForm"
+            class="bg-white/70 backdrop-blur-sm p-6 rounded-lg shadow-md"
+          >
+            <div class="mb-6">
+              <label for="name" class="block text-rose-800 mb-2">Nama</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full px-4 py-2 rounded-lg border border-rose-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all duration-300"
+                required
+              />
+            </div>
+
+            <div class="mb-6">
+              <label for="attendance" class="block text-rose-800 mb-2"
+                >Konfirmasi Kehadiran</label
+              >
+              <select
+                id="attendance"
+                name="attendance"
+                class="w-full px-4 py-2 rounded-lg border border-rose-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all duration-300"
+                required
+              >
+                <option value="">Pilih konfirmasi</option>
+                <option value="yes">Ya, Saya Akan Hadir</option>
+                <option value="no">Maaf, Saya Tidak Bisa Hadir</option>
+              </select>
+            </div>
+
+            <div class="mb-6">
+              <label for="guests" class="block text-rose-800 mb-2"
+                >Jumlah Tamu</label
+              >
+              <input
+                type="number"
+                id="guests"
+                name="guests"
+                min="1"
+                max="2"
+                class="w-full px-4 py-2 rounded-lg border border-rose-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all duration-300"
+                required
+              />
+              <p class="text-sm text-rose-600 mt-1">Maksimal 2 orang</p>
+            </div>
+
+            <div class="mb-6">
+              <label for="message" class="block text-rose-800 mb-2"
+                >Ucapan & Doa</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="w-full px-4 py-2 rounded-lg border border-rose-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all duration-300"
+                required
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full px-6 py-3 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors duration-300"
+            >
+              Kirim Konfirmasi
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+/* Navbar Styles */
+#mainNav {
+    background-color: rgba(255, 241, 242, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Overlay Styles */
+#lockOverlay {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Hero Section Styles */
+#home {
+    position: relative;
+    z-index: 45;
+}
+
+/* Music Control Styles */
+#musicControl {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Button Styles */
+#showInvitation {
+    animation: pulse 2s infinite;
+    position: relative;
+    z-index: 50;
+}
+
+/* Navigation Link Styles */
+.nav-link {
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #881337;
+    transition: all 0.2s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #881337;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(225, 29, 72, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(225, 29, 72, 0);
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
+
+/* Countdown Timer Styles */
+#days, #hours, #minutes, #seconds {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Main Content Transitions */
+#mainContent {
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+/* Lock Scroll */
+body.lock-scroll {
+    overflow: hidden;
+}
