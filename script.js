@@ -244,39 +244,21 @@ function shareLocation() {
 }
 
 // RSVP Form Handler
-document
-  .getElementById("rsvpForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Mencegah pengiriman formulir default
-
-    const formData = new FormData(this); // Mengambil data dari formulir
-    const data = Object.fromEntries(formData.entries()); // Mengonversi FormData menjadi objek
-
-    fetch(
-      "https://script.google.com/macros/s/AKfycbxcNlDvrisCpSI8URP6dwaj2ALTGyFfUoCLb1Av0DLkOuvhSs8tTaE0X_bsrPimN9oE/exec",
-      {
-        // Ganti dengan URL Google Apps Script Anda
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data), // Mengirim data sebagai JSON
-      }
-    )
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        alert("Konfirmasi berhasil dikirim!");
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        alert("Terjadi kesalahan saat mengirim konfirmasi.");
-      });
+window.addEventListener("load", function() {
+  const form = document.getElementById('my-form');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("Konfirmasi Kehadiran Berhasil Terkirim!");
+    })
   });
+});
 
 // Call weather API when page loads
 document.addEventListener("DOMContentLoaded", getWeather);
